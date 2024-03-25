@@ -9,7 +9,7 @@ import useCart from '../hooks/useCart';
 const SHIPPING = 3000;
 
 export default function MyCart() {
-  const { cartQuery: {isLoading, error, data: products} } = useCart();
+  const { cartQuery: {isLoading, data: products} } = useCart();
   if(isLoading) return <p>Loading...</p>
 
   const hasProducts = products && products.length > 0;

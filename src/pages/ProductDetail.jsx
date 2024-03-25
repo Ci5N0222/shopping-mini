@@ -19,7 +19,7 @@ export default function ProductDetail() {
   const handleSelect = (e) => setSelected(e.target.value);
 
   const handleClick = async(e) => {
-    if(uid != null && uid != undefined){
+    if(uid !== null && uid !== undefined){
       const product = { id, image, title, price, option: selected, quantity: 1 };
       addOrUpdateItem.mutate(product, {
         onSuccess: () => {
